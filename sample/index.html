@@ -22,7 +22,7 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="stylesheets/styleSheetStart.css">
 	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src="dist/amazon-cognito-auth.min.js"></script>
+	<script src="../dist/amazon-cognito-auth.min.js"></script>
 	<!-- To enable the advanced security feature -->
 	<!-- <script src="https://amazon-cognito-assets.<region>.amazoncognito.com/amazon-cognito-advanced-security-data.min.js"></script> -->
 	<!-- E.g. -->
@@ -206,16 +206,13 @@
 		// You can also set state parameter 
 		// auth.setState(<state parameter>);  
 		auth.userhandler = {
-			onSuccess: <TODO: your onSuccess callback here>,
-			onFailure: <TODO: your onFailure callback here>
-			/** E.g.
 			onSuccess: function(result) {
 				alert("Sign in success");
 				showSignedIn(result);
 			},
 			onFailure: function(err) {
 				alert("Error!" + err);
-			}*/
+			}
 		};
 		// The default response_type is "token", uncomment the next line will make it be "code".
 		// auth.useCodeGrantFlow();
